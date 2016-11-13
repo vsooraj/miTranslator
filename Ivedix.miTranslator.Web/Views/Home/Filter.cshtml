@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Ivedix.miTranslator.Web.ViewModels.KeyViewModel>
+
+@{
+    ViewBag.Title = "Filter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="jumbotron">
+
+        @foreach (var item in Model)
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    @Html.Label(item.Name)
+                </div>
+                @Html.Partial("Key", item)
+            </div>
+        }
+
+    </div>
+</div>
