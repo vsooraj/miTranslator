@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@ViewBag.Title</title>
+    <title>mi Translator</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    
     <!-- Bootstrap -->
     @Styles.Render("~/bootstrap/css")
     <!--[if lt IE 9]>
@@ -13,32 +15,51 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/
     respond.min.js"></script>
     <![endif]-->
+   
 </head>
 <body>
     <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            @Html.ActionLink("Store", "Index", "Home", new { }, new { @class = "navbar-brand" })
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="nav navbar-nav">
-                <li class="active">
-                    @Html.ActionLink("Tablets", "Index", "Home", new { category = "Tablets" }, null)
-                </li>
-                <li class="active">
-                    @Html.ActionLink("Laptops", "Index", "Home", new { category = "Laptops" }, null)
-                </li>
-                <li class="active">
-                    @Html.ActionLink("Mobiles", "Index", "Home", new { category = "Mobiles" }, null)
-                </li>
-            </ul>
+        <div id="navBar" class="container">
+            <a class="navbar-brand"><img src="images/ivedix-nameplate.png" width="132" height="auto" alt="miGuard" /></a>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>                
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        @Html.ActionLink("Keys", "Index", "Home", new { category = "Tablets" }, null)
+                    </li>
+                    <li>
+                        @Html.ActionLink("Translation", "Index", "Home", new { category = "Laptops" }, null)
+                    </li>
+                    <li>
+                        @Html.ActionLink("Log", "Index", "Home", new { category = "Mobiles" }, null)
+                    </li>
+                    <li>
+                        @Html.ActionLink("Settings", "Index", "Home", new { category = "Mobiles" }, null)
+                    </li>
+                </ul>  
+                    <ul class="nav navbar-nav pull-right">
+                        <li>
+                            @Html.ActionLink("User", "Index", "Home", null, null)
+
+                        </li>
+                        <li>
+                            @Html.ActionLink("Log-out", "Index", "Home", null, null)
+
+                        </li>
+
+                    </ul>             
+
+            </div>
+            
         </div>
     </nav>
     @RenderBody()
