@@ -1,0 +1,35 @@
+﻿<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand"
+               href='@Url.Action("Index", "Home")'>
+                <img src='@Url.Content("images/ivedix-nameplate.png")' width="132" height="auto" alt="miGuard" />
+
+
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              
+                <li>
+                    @Html.ActionLink("Keys", "Index", "Home", new { category = "Tablets" }, null)
+                </li>
+                <li>
+                    @Html.ActionLink("Translation", "Index", "Home", new { category = "Laptops" }, null)
+                </li>
+                <li>
+                    @Html.ActionLink("Log", "Index", "Home", new { category = "Mobiles" }, null)
+                </li>
+                <li>
+                    @Html.ActionLink("Settings", "Index", "Home", new { category = "Mobiles" }, null)
+                </li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div>
+</div>
